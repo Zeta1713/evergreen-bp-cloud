@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Evergreen BP">
+<meta name="theme-color" content="#12402a">
+<link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icon-180.png"><link rel="icon" href="icon-192.png">
+<title>Evergreen Business Plan · online</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="app">
+  <aside id="side">
+    <div class="brand">
+      <div class="logo">EVER<span>GREEN</span></div>
+      <div class="brand-sub">ASD Evergreen Civitavecchia</div>
+      <div class="brand-sub">Stagione 2027/2028 · set – apr</div>
+    </div>
+    <nav id="nav"></nav>
+    <div class="side-foot">
+      <div class="cassa"><span>Saldo di cassa</span><b id="sideSaldo"></b></div>
+      <div id="saveState" class="save-state">—</div>
+      <div id="dataFile" class="data-file"></div>
+    </div>
+  </aside>
+  <main id="main">
+    <header id="top">
+      <div class="top-title">
+        <h1 id="pTitle"></h1>
+        <div id="pSub" class="muted"></div>
+      </div>
+      <div class="top-right">
+        <div id="badge" class="phase"></div>
+        <button id="btnReport" class="primary">Report da stampare</button>
+      </div>
+    </header>
+    <section id="view"></section>
+  </main>
+</div>
+<div class="toast" id="toast" hidden></div>
+<script src="app.js"></script>
+<script type="module" src="cloud.js"></script>
+<script>if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => {});</script>
+</body>
+</html>
